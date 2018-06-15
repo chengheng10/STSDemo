@@ -1,12 +1,12 @@
-package com.android.androidWearDao;
+package com.android.STSDemoDao;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.android.androidWearModel.MasterInfo;
-import com.android.androidWearModel.SensorInfo;
-import com.android.androidWearModel.TaskInfo;
+import com.android.STSDemoModel.MasterInfo;
+import com.android.STSDemoModel.SensorInfo;
+import com.android.STSDemoModel.TaskInfo;
 
 
 public interface TaskMapper {

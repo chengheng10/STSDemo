@@ -1,4 +1,4 @@
-package com.android.androidWearModel;
+package com.android.STSDemoModel;
 
 public class TaskInfo {
 	// タスク時間

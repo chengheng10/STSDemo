@@ -1,4 +1,4 @@
-package com.android.androidWearController;
+package com.android.STSDemoController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,12 +24,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.android.androidUtil.Constant;
-import com.android.androidUtil.FCM;
-import com.android.androidWearModel.MasterInfo;
-import com.android.androidWearModel.SensorInfo;
-import com.android.androidWearModel.TaskInfo;
-import com.android.androidWearService.TaskService;
+import com.android.STSDemoModel.MasterInfo;
+import com.android.STSDemoModel.SensorInfo;
+import com.android.STSDemoModel.TaskInfo;
+import com.android.STSDemoService.TaskService;
+import com.android.STSDemoUtil.Constant;
+import com.android.STSDemoUtil.FCM;
 
 @Controller
 public class TaskController {

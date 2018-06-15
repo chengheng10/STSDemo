@@ -1,4 +1,4 @@
-package com.android.androidWearModel;
+package com.android.STSDemoModel;
 
 public class Add {
     private String id;

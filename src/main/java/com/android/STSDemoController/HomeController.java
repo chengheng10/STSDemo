@@ -1,4 +1,4 @@
-package com.android.androidWearController;
+package com.android.STSDemoController;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -20,8 +20,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.android.androidWearModel.Add;
-import com.android.androidWearModel.HttpResult;
+import com.android.STSDemoModel.Add;
+import com.android.STSDemoModel.HttpResult;
 
 /**
  * Handles requests for the application home page.

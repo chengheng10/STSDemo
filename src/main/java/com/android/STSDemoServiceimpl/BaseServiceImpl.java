@@ -1,4 +1,4 @@
-package com.android.androidWearServiceimpl;
+package com.android.STSDemoServiceimpl;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,9 +6,9 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.android.androidWearDao.AddMapper;
-import com.android.androidWearModel.Add;
-import com.android.androidWearService.BaseService;
+import com.android.STSDemoDao.AddMapper;
+import com.android.STSDemoModel.Add;
+import com.android.STSDemoService.BaseService;
 
 
 @Service("baseService")

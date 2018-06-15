@@ -1,4 +1,4 @@
-package com.android.androidUtil;
+package com.android.STSDemoUtil;
 
 public class Constant {
 	// FCMのサーバーキー

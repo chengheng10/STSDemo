@@ -1,8 +1,8 @@
-package com.android.androidWearDao;
+package com.android.STSDemoDao;
 
 import java.util.List;
 
-import com.android.androidWearModel.Add;
+import com.android.STSDemoModel.Add;
 
 
 public interface AddMapper {

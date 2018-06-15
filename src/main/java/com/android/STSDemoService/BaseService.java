@@ -1,8 +1,8 @@
-package com.android.androidWearService;
+package com.android.STSDemoService;
 
 import java.util.List;
 
-import com.android.androidWearModel.Add;
+import com.android.STSDemoModel.Add;
 
 
 public interface BaseService {

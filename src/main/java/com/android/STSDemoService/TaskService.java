@@ -1,10 +1,10 @@
-package com.android.androidWearService;
+package com.android.STSDemoService;
 
 import java.util.List;
 
-import com.android.androidWearModel.MasterInfo;
-import com.android.androidWearModel.SensorInfo;
-import com.android.androidWearModel.TaskInfo;
+import com.android.STSDemoModel.MasterInfo;
+import com.android.STSDemoModel.SensorInfo;
+import com.android.STSDemoModel.TaskInfo;
 
 
 public interface TaskService {

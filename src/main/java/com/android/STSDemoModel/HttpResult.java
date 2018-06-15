@@ -1,4 +1,4 @@
-package com.android.androidWearModel;
+package com.android.STSDemoModel;
 
 import java.util.Map;
 

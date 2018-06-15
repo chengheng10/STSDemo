@@ -1,4 +1,4 @@
-package com.android.androidWearServiceimpl;
+package com.android.STSDemoServiceimpl;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,13 +12,13 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.android.androidUtil.Constant;
-import com.android.androidUtil.FCM;
-import com.android.androidWearDao.TaskMapper;
-import com.android.androidWearModel.MasterInfo;
-import com.android.androidWearModel.SensorInfo;
-import com.android.androidWearModel.TaskInfo;
-import com.android.androidWearService.TaskService;
+import com.android.STSDemoDao.TaskMapper;
+import com.android.STSDemoModel.MasterInfo;
+import com.android.STSDemoModel.SensorInfo;
+import com.android.STSDemoModel.TaskInfo;
+import com.android.STSDemoService.TaskService;
+import com.android.STSDemoUtil.Constant;
+import com.android.STSDemoUtil.FCM;
 
 @Service("taskService")
 public class TaskServiceImpl implements TaskService {

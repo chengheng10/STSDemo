@@ -1,4 +1,4 @@
-package com.android.androidWearController;
+package com.android.STSDemoController;
 
 import java.util.List;
 import java.util.UUID;
@@ -12,8 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.android.androidWearModel.Add;
-import com.android.androidWearService.BaseService;
+import com.android.STSDemoModel.Add;
+import com.android.STSDemoService.BaseService;
 
 
 @Controller

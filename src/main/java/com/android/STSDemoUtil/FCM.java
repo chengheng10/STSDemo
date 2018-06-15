@@ -1,4 +1,4 @@
-package com.android.androidUtil;
+package com.android.STSDemoUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;

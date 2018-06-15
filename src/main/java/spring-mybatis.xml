@@ -57,7 +57,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.android.androidWearDao" />
+		<property name="basePackage" value="com.android.STSDemoDao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
@@ -105,7 +105,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 	<bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
 		<property name="patterns">
 			<list>
-				<value>com.android.androidWearService.*</value>
+				<value>com.android.STSDemoService.*</value>
 			</list>
 		</property>
 	</bean>
