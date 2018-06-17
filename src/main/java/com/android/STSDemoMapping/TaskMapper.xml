@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.android.androidWearDao.TaskMapper">
-	<resultMap id="taskInfo" type="com.android.androidWearModel.TaskInfo">
-		<result property="date" column="date" />
-		<result property="detail" column="detail" />
-		<result property="id" column="id" />
-		<result property="state" column="state" />
-		<result property="tid" column="tid" />
-	</resultMap>
+<mapper namespace="com.android.STSDemoDao.TaskMapper">
+    <resultMap id="taskInfo" type="com.android.STSDemoModel.TaskInfo">
+        <result property="date" column="date"/>
+        <result property="detail" column="detail"/>
+        <result property="id" column="id"/>
+        <result property="state" column="state"/>
+        <result property="tid" column="tid"/>
+    </resultMap>
 
-	<resultMap id="sensorInfo" type="com.android.androidWearModel.SensorInfo">
-		<result property="blueToothMac" column="blueToothMac" />
-		<result property="time" column="time" />
-		<result property="id" column="id" />
-		<result property="type" column="type" />
-		<result property="x" column="x" />
-		<result property="y" column="y" />
-		<result property="z" column="z" />
-		<result property="sensor_id" column="sensor_id" />
-	</resultMap>
-
-
-	<resultMap id="masterInfo" type="com.android.androidWearModel.MasterInfo">
-		<result property="blueToothMac" column="blueToothMac" />
-		<result property="name" column="name" />
-	</resultMap>
+    <resultMap id="sensorInfo" type="com.android.STSDemoModel.SensorInfo">
+        <result property="blueToothMac" column="blueToothMac"/>
+        <result property="time" column="time"/>
+        <result property="id" column="id"/>
+        <result property="type" column="type"/>
+        <result property="x" column="x"/>
+        <result property="y" column="y"/>
+        <result property="z" column="z"/>
+        <result property="sensor_id" column="sensor_id"/>
+    </resultMap>
 
 
+    <resultMap id="masterInfo" type="com.android.STSDemoModel.MasterInfo">
+        <result property="blueToothMac" column="blueToothMac"/>
+        <result property="name" column="name"/>
+    </resultMap>
 
-	<select id="getTaskList" resultMap="taskInfo">
+
+    <select id="getTaskList" resultMap="taskInfo">
 		SELECT * FROM task
 		where
 		bluetoothMac = #{taskinfo.blueToothMac}
@@ -36,7 +35,7 @@
 		order by id
 	</select>
 
-	<insert id="addTaskInfo">
+    <insert id="addTaskInfo">
 		insert
 		into task(blueToothMac,id, detail, state, date,
 		tid)
@@ -52,7 +51,7 @@
 		)
 	</insert>
 
-	<update id="updateTaskInfo">
+    <update id="updateTaskInfo">
 		update
 		task
 		set
@@ -66,7 +65,7 @@
 		#{taskinfo.id}
 	</update>
 
-	<select id="selectByPrimaryKey" resultMap="taskInfo">
+    <select id="selectByPrimaryKey" resultMap="taskInfo">
 		SELECT * FROM task
 		where
 		bluetoothMac = #{taskinfo.blueToothMac}
@@ -76,7 +75,7 @@
 		#{taskinfo.id}
 	</select>
 
-	<insert id="addTaskHistoryInfo">
+    <insert id="addTaskHistoryInfo">
 		insert
 		into taskHistory(blueToothMac,id, detail,
 		state, date,
@@ -94,7 +93,7 @@
 	</insert>
 
 
-	<select id="getTaskHistoryList" resultMap="taskInfo">
+    <select id="getTaskHistoryList" resultMap="taskInfo">
 		SELECT * FROM
 		taskHistory
 		where
@@ -103,7 +102,7 @@
 		order by date
 	</select>
 
-	<select id="getDeviceName" resultType="String">
+    <select id="getDeviceName" resultType="String">
 		select
 		name
 		from
@@ -113,7 +112,7 @@
 	</select>
 
 
-	<insert id="addSensorInfo">
+    <insert id="addSensorInfo">
 		insert into sensordatas(
 		bluetoothmac,
 		time,
@@ -134,7 +133,7 @@
 	</insert>
 
 
-	<select id="getSensorList" resultMap="sensorInfo">
+    <select id="getSensorList" resultMap="sensorInfo">
 		SELECT * FROM
 		sensordatas
 		where
@@ -143,12 +142,11 @@
 		order by time
 	</select>
 
-	<select id="getMasterList" resultMap="masterInfo">
+    <select id="getMasterList" resultMap="masterInfo">
 
 		select * from master
 
 	</select>
-
 
 
 </mapper>

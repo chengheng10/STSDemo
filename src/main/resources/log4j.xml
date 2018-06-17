@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.android.androidWear">
+	<logger name="com.android.STSDemo">
 		<level value="info" />
 	</logger>
 	

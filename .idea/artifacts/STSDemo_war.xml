@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="STSDemo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="StsDemo-1.0.0-BUILD-SNAPSHOT.war">
+      <element id="artifact" artifact-name="STSDemo:war exploded" />
+    </root>
+  </artifact>
+</component>
