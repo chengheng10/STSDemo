@@ -40,25 +40,16 @@ public class UDController {
 		System.out.println(sc.getRealPath("/WEB-INF/files/"));
 		try {
 			// request.setCharacterEncoding("utf-8");
-			// 閿熸枻鎷烽敓鏂ゆ嫹涓�閿熸枻鎷烽�氶敓鐭殑澶氶儴閿熻鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹
 			CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver(sc);
-			// 閿熷彨璁规嫹 request 閿熻鍑ゆ嫹閿熸枻鎷烽敓渚ョ》鎷烽敓杈冭揪鎷�?,閿熸枻鎷烽敓娲侀儴閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷�?
 			if (multipartResolver.isMultipart(request)) {
-				// 杞敓鏂ゆ嫹閿熺即澶氶儴閿熸枻鎷穜equest
 				MultipartHttpServletRequest multiRequest = multipartResolver.resolveMultipart(request);
-				// 鍙栭敓鏂ゆ嫹request閿熷彨纰夋嫹閿熸枻鎷烽敓鏂ゆ嫹閿熶茎纭锋嫹閿熸枻鎷�
 				Iterator<String> iter = multiRequest.getFileNames();
 				while (iter.hasNext()) {
-					// 鍙栭敓鏂ゆ嫹閿熻緝杈炬嫹閿熶茎纭锋嫹
 					MultipartFile file = multiRequest.getFile(iter.next());
 					if (file != null) {
-						// 鍙栭敓鐭鎷峰墠閿熻緝杈炬嫹閿熶茎纭锋嫹閿熸枻鎷烽敓渚ョ�?�鎷烽敓鏂ゆ嫹閿熸枻鎷�
 						String myFileName = file.getOriginalFilename();
-						// 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷锋拠閿熻娇顏庢嫹閿熸枻鎷烽敓锟�?,璇撮敓鏂ゆ嫹閿熸枻鎷烽敓渚ョ》鎷烽敓鏂ゆ嫹閿熻妭锝忔嫹閿熸枻鎷烽敓鏂ゆ嫹璇撮敓鏂ゆ嫹閿熸枻鎷烽敓渚ョ》鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹
 						if (myFileName.trim() != "") {
-							// 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓杈冭揪鎷烽敓鏂ゆ嫹閿熸枻鎷峰嫙閿熸枻鎷烽敓锟�
 							String fileName = file.getOriginalFilename();
-							// 閿熸枻鎷烽敓鏂ゆ嫹閿熻緝杈炬嫹璺敓鏂ゆ�?
 							String dirPath = sc.getRealPath("/WEB-INF/files/");
 							// String dirPath = request.getServletContext().getRealPath("/WEB-INF/files/");
 							File dir = new File(dirPath);
@@ -67,7 +58,6 @@ public class UDController {
 							}
 							File localFile = new File(dir, fileName);
 							file.transferTo(localFile);
-							// 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷峰嫙閿熼摪鍑ゆ嫹閿燂拷
 							// result.setStatus(0);
 							// result.setData(localFile.getName());
 							// result.setMsg("閿熻緝杈炬嫹閿熺即鐧告嫹");
@@ -98,17 +88,13 @@ public class UDController {
 		String fileFullPath = sc.getRealPath(filePath);
 		File file = new File(fileFullPath);
 		if (file.exists()) {
-			// 閿熸枻鎷烽敓鏂ゆ嫹response
 			response.reset();
 			response.setCharacterEncoding("utf-8");
 			response.setContentType("text/html;charset=utf-8");
-			// 閿熸枻鎷烽敓鏂ゆ嫹http澶撮敓鏂ゆ嫹鎭敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ�?
 			// response.addHeader("Content-Disposition",
 			// "attachment;filename=\""+fileName+"\"");
-			// 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹鍕熼敓鏂ゆ嫹閿熸枻鎷烽敓缁炴拝鎷烽敓鏂ゆ嫹閿燂拷
 			response.addHeader("Content-Disposition",
 					"attachment;filename=" + new String(fileName.getBytes("gb2312"), "ISO8859-1"));
-			// 閿熸枻鎷烽敓鏂ゆ嫹閿熶茎纭锋嫹閿熸枻鎷烽敓鏂ゆ嫹
 			int fileLength = (int) file.length();
 			response.setContentLength(fileLength);
 
@@ -116,21 +102,16 @@ public class UDController {
 				InputStream inStream = new FileInputStream(file);
 				byte[] buf = new byte[4096];
 
-				// 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿燂�?
 				ServletOutputStream servletOS = response.getOutputStream();
 				int readLength;
 
-				// 閿熸枻鎷峰彇閿熶茎纭锋嫹閿熸枻鎷烽敓鎹疯鎷峰啓閿熻鍒皉esponse閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓锟�
 				while ((readLength = inStream.read(buf)) != -1) {
 					servletOS.write(buf, 0, readLength);
 				}
-				// 閿熸埅鎲嬫嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷�
 				inStream.close();
 
-				// 鍒烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿燂�?
 				servletOS.flush();
 
-				// 閿熸埅鎲嬫嫹閿熸枻鎷烽敓鏂ゆ嫹閿燂拷
 				servletOS.close();
 			}
 		} else {
